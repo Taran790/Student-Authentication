@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('Student ERP Backend API is running successfully!');
+});
 app.use('/api', require('./routes/auth'));
 
 // Connect to MongoDB
