@@ -2,6 +2,7 @@ services:
   - type: web
     name: student-auth-backend
     env: node
+    plan: free
     buildCommand: npm install
     startCommand: node server.js
     envVars:
