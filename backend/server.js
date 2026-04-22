@@ -20,7 +20,7 @@ let mongoServer;
 
 const connectDB = async () => {
   try {
-    let mongoUri = process.env.MONGO_URI;
+    let mongoUri = process.env.MONGO_URI ? process.env.MONGO_URI.trim() : null;
 
     if (!mongoUri) {
       mongoServer = await MongoMemoryServer.create();
